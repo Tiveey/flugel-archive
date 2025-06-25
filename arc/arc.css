@@ -1,0 +1,377 @@
+/* Custom Styles */
+:root {
+  /* Light mode colors */
+  --color-novel-primary: rgb(220,128,37); /* From Tailwind Config */
+  --color-novel-secondary: #64748b; /* From Tailwind Config */
+  --color-novel-accent: #f59e0b; /* From Tailwind Config */
+
+  --color-text-default: #1f2937;   /* gray-900 */
+  --color-text-secondary: #4b5563; /* gray-700 */
+  --color-text-light: #f9fafb;     /* gray-50 - for elements that need light text in light mode */
+
+  --color-bg-default: #f9fafb;     /* gray-50 */
+  --color-bg-card: #ffffff;        /* white */
+  --color-bg-light-element: #e5e7eb; /* gray-200 */
+  --color-bg-navbar: rgb(243, 244, 246); /* gray-100 for light mode navbar */
+
+  --color-blockquote-border: var(--color-novel-primary);
+  --color-blockquote-text: var(--color-novel-secondary);
+
+  --color-scrollbar-track: #f1f5f9;
+  --color-scrollbar-thumb: #cbd5e1;
+  --color-scrollbar-thumb-hover: #94a3b8;
+}
+
+html.dark {
+  /* Dark mode colors */
+  --color-novel-primary: #f59e0b; /* Adjusted for better visibility in dark mode */
+  --color-novel-secondary: #9ca3af; /* A lighter secondary for dark mode */
+  --color-novel-accent: #f59e0b; 
+
+  --color-text-default: #f3f4f6;   /* gray-100 */
+  --color-text-secondary: #d1d5db; /* gray-300 */
+  --color-text-light: #111827;     /* gray-900 - for elements that need dark text in dark mode */
+
+  --color-bg-default: #111827;     /* gray-900 */
+  --color-bg-card: #1f2937;        /* gray-800 */
+  --color-bg-light-element: #374151; /* gray-700 */
+  --color-bg-navbar: rgb(17, 24, 39); /* gray-900 for dark mode navbar */
+
+  --color-blockquote-border: var(--color-novel-primary);
+  --color-blockquote-text: var(--color-novel-secondary);
+
+  --color-scrollbar-track: #1f2937; /* Darker track */
+  --color-scrollbar-thumb: #6b7280; /* Darker thumb */
+  --color-scrollbar-thumb-hover: #4b5563; /* Even darker hover */
+}
+
+/* Hero blur effect */
+.hero-blur {
+  filter: blur(2px);
+  transform: scale(1.1);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-thumb-hover);
+}
+
+/* Dropdown animations */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu {
+  transform: translateY(-10px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Chapter item hover effects */
+.chapter-item {
+  transition: all 0.2s ease-in-out;
+  background-color: var(--color-bg-card); /* Use variable */
+  color: var(--color-text-default); /* Use variable */
+}
+
+.chapter-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-bg-light-element); /* Use variable */
+}
+
+/* Comment formatting styles */
+.comment-content strong {
+  font-weight: 600;
+}
+
+.comment-content em {
+  font-style: italic;
+}
+
+.comment-content u {
+  text-decoration: underline;
+}
+
+.comment-content blockquote {
+  border-left: 4px solid var(--color-blockquote-border);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: var(--color-blockquote-text);
+}
+
+.comment-content a {
+  color: var(--color-novel-primary);
+  text-decoration: underline;
+}
+
+/* Bookmark button animation */
+.bookmark-btn.bookmarked {
+  background-color: var(--color-novel-accent);
+}
+
+.bookmark-btn.bookmarked:hover {
+  background-color: #d97706;
+}
+
+.bookmark-btn i {
+  transition: all 0.2s ease-in-out;
+}
+
+.bookmark-btn.bookmarked i {
+  transform: scale(1.1);
+}
+
+/* Loading animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-blur {
+      filter: blur(1px);
+  }
+  
+  .chapter-item:hover {
+      transform: none;
+  }
+}
+
+/* Focus states for accessibility */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-novel-primary);
+  outline-offset: 2px;
+}
+
+/* Novel cover image styling */
+img[alt="Novel Cover"],
+img[alt="Related Novel"] {
+  transition: transform 0.2s ease-in-out;
+}
+
+img[alt="Novel Cover"]:hover,
+img[alt="Related Novel"]:hover {
+  transform: scale(1.05);
+}
+
+/* Tag hover effects */
+.tag-item {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.tag-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Comment toolbar styling */
+.comment-tool {
+  transition: all 0.2s ease-in-out;
+}
+
+.comment-tool:hover {
+  background-color: var(--color-bg-light-element); /* Use variable */
+  transform: scale(1.05);
+}
+
+.comment-tool.active {
+  background-color: var(--color-novel-primary);
+  color: white;
+}
+
+/* Synopsis toggle animation */
+.synopsis-content {
+  position: relative;
+}
+
+.synopsis-hidden {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Chapter status indicators */
+.chapter-status {
+  position: relative;
+  overflow: hidden;
+}
+
+.chapter-status::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.chapter-status:hover::before {
+  left: 100%;
+}
+
+/* Mobile menu - ditampilkan sebagai overlay di bawah navbar */
+#mobile-menu,
+nav {
+  /* Pastikan berada di atas konten hero */
+  z-index: 60;
+}
+
+#mobile-menu {
+  position: absolute;     /* Agar tidak menambah tinggi navbar */
+  top: 100%;              /* Tepat di bawah navbar */
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg-navbar); /* Use variable */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* Animasi slide-down */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+#mobile-menu.show {
+  max-height: 300px;      /* Sesuaikan sesuai kebutuhan */
+}
+
+/* ========== Tambahan tampilan tautan di dalam menu mobile ========== */
+#mobile-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fb923c; /* orange-400 - keeping this for mobile menu links as per original */
+  font-weight: 500;
+}
+
+#mobile-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+/* Novel rating stars */
+.rating-stars {
+  display: inline-flex;
+  align-items: center;
+}
+
+.rating-stars i {
+  transition: color 0.2s ease-in-out;
+}
+
+/* Footer social icons */
+footer {
+  background-color: var(--color-bg-navbar);
+}
+
+footer .fab {
+  transition: all 0.2s ease-in-out;
+}
+
+footer .fab:hover {
+  transform: translateY(-2px);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--color-novel-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success message */
+.success-message {
+  background-color: #10b981;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Error message */
+.error-message {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Theme Toggle Button Styles */
+#theme-toggle-btn {
+  border-color: transparent;
+  background-color: var(--color-bg-light-element); /* Changed to light element bg for consistency */
+}
+
+html.dark #theme-toggle-btn {
+  background-color: var(--color-bg-light-element); /* Changed to dark element bg for consistency */
+}
+
+#theme-toggle-btn .pointer-events-none {
+  transform: translateX(0);
+}
+
+html.dark #theme-toggle-btn .pointer-events-none {
+  transform: translateX(20px); /* 20px for 11-w = 44px, 5-w = 20px */
+  background-color: var(--color-bg-card); /* Use variable for thumb */
+}
+
+#theme-toggle-btn .pointer-events-none > span:first-child { /* Sun Icon */
+  opacity: 0; /* Hidden in light mode (show moon to switch to dark) */
+}
+
+#theme-toggle-btn .pointer-events-none > span:last-child { /* Moon Icon */
+  opacity: 1; /* Visible in light mode (show moon to switch to dark) */
+}
+
+html.dark #theme-toggle-btn .pointer-events-none > span:first-child { /* Sun Icon */
+  opacity: 1; /* Visible in dark mode (show sun to switch to light) */
+}
+
+html.dark #theme-toggle-btn .pointer-events-none > span:last-child { /* Moon Icon */
+  opacity: 0; /* Hidden in dark mode (show sun to switch to light) */
+}

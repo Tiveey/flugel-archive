@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlugelArchive - Web Novel</title>
+    <link rel="icon" type="image/jpeg" href="img/emilasmall.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500;600&family=Lora:wght@400;500;600;700&family=Rubik:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav
+        class="fixed top-0 left-0 w-full bg-gradient-to-r from-gray-800 to-gray-900 bg-opacity-95 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-14">
+                <!-- Logo -->
+                <a href="#" class="text-xl font-bold"><img src="img/logo_darkmode.png" alt="FlugelArchive"
+                        class="h-14"></a>
+
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-orange-400 hover:text-orange-300 px-3 py-2 text-sm">
+                        <i class="fas fa-home"></i> Beranda
+                    </a>
+                    <a href="#novel-title-section" class="text-orange-400 hover:text-orange-300 px-3 py-2 text-sm">
+                        <i class="fas fa-book"></i> Daftar Novel
+                    </a>
+                    <a href="https://www.facebook.com/tiveey/"
+                        class="text-orange-400 hover:text-orange-300 px-3 py-2 text-sm">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/kurrkur04/"
+                        class="text-orange-400 hover:text-orange-300 px-3 py-2 text-sm">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+
+                <!-- Mobile controls -->
+                <div class="flex items-center space-x-2">
+                    <button id="theme-toggle" class="text-orange-400 p-2 hover:text-orange-300 focus:outline-none">
+                        <i class="fas fa-sun text-sm"></i>
+                    </button>
+                    <button id="mobile-menu-button"
+                        class="block md:hidden text-orange-400 p-2 hover:text-orange-300 focus:outline-none">
+                        <div class="hamburger-lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+                <a href="#" class="block text-orange-400 hover:text-orange-300 px-4 py-2"><i
+                        class="fas fa-home mr-2"></i>Home</a>
+                <a href="#novel-title-section" class="block text-orange-400 hover:text-orange-300 px-4 py-2"><i
+                        class="fas fa-book mr-2"></i>List Novel</a>
+                <a href="https://www.facebook.com/tiveey/"
+                    class="block text-orange-400 hover:text-orange-300 px-4 py-2"><i
+                        class="fab fa-facebook mr-2"></i>Facebook</a>
+                <a href="https://www.instagram.com/kurrkur04/"
+                    class="block text-orange-400 hover:text-orange-300 px-4 py-2"><i
+                        class="fab fa-instagram mr-2"></i>Instagram</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-container">
+            <div class="title-container">
+                <h1 class="main-title"><span class="text-[#dc8025]">Flugel</span> <span
+                        class="text-[#e9e9e9]">Archive</span></h1>
+                <p class="subtitle">STARTING POST A NEW INFO | Re:Zero Archive</p>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#daftar-novel" class="scroll-down-link">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="container mt-5" id="daftar-novel">
+        <div class="latest-update">
+            <img src="img/emilasmall.png" alt="Emilia">
+            <div class="latest-update-content">
+                <a href="arc/daftar_bab/arc_bab/arc9/bab5.html" class="text-decoration-none">
+                    <div class="latest-update-title">
+                        Arc 9 - Bab 5: Akhir dari Permulaan <span class="latest-update-badge">NEW</span>
+                    </div>
+                    <p class="latest-update-text">Chapter baru udah up nih! Yuk langsung cek kelanjutan petualangan
+                        Subaru di Arc 9! 🔥</p>
+                    <div class="latest-update-time">Baru saja diupdate</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="novel-title-container" id="novel-title-section">
+            <h1 class="novel-title">Daftar Novel</h1>
+        </div>
+        <div class="arc-section">
+            <div class="arc-item">
+                <a href="arc/arc1.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h3 class="arc-card-title">Arc 1 - Hari Pertama yang Bergejolak</h3>
+                            <p>Tiba-tiba saja Natsuki Subaru terdampar di dunia fantasi dan bertemu dengan Emilia,
+                                seorang gadis cantik berambut perak. Nggak nyangka, dia malah dapat kekuatan aneh yang
+                                bikin hidupnya makin rumit. Kini Natsuki Subaru harus bertahan hidup di dunia baru yang
+                                berbahaya ini sambil berusaha melindungi teman barunya itu.</p>
+                        </div>
+                        <img src="img_card/arc1.webp" alt="Arc 1">
+                    </div>
+                </a>
+            </div>
+            <div class="arc-item">
+                <a href="arc/arc2.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h3 class="arc-card-title">Arc 2 - Minggu yang Kacau</h3>
+                            <p>Setelah menyelamatkan Emilia dan mengatasi luka beratnya, Subaru terbangun di Roswaal
+                                Manor, tempat ia segera mulai bekerja sebagai pelayan bersama dua pelayan kembar, Ram
+                                dan Rem. Namun, selama hari-hari pertamanya di sana, ia kembali mendapati dirinya
+                                dibunuh dalam tidurnya. Berharap untuk menemukan pembunuhnya, Subaru melakukan segala
+                                cara untuk mendapatkan kepercayaan semua orang di mansion dan menghentikan calon
+                                pembunuh tersebut.</p>
+                        </div>
+                        <img src="img_card/arc2.webp" alt="Arc 2">
+                    </div>
+                </a>
+            </div>
+            <div class="arc-item">
+                <a href="arc/arc3.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h3 class="arc-card-title">Arc 3 - Kembali ke Ibukota Kerajaan</h3>
+                            <p>Subaru balik lagi ke ibukota dan langsung kecemplung ke drama perebutan tahta yang
+                                super panas. Bareng temen-temen lamanya plus beberapa sekutu baru, dia harus hadapi
+                                musuh-musuh tangguh dan ujian yang nggak kalah serem. Dengan kekuatan spesialnya,
+                                Subaru berusaha mati-matian buat lindungi orang-orang yang dia sayangi dan masa depan
+                                kerajaan.</p>
+                        </div>
+                        <img src="img_card/arc3.webp" alt="Arc 3">
+                    </div>
+                </a>
+            </div>
+            <div class="arc-item">
+                <a href="arc/arc4.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h3 class="arc-card-title">Arc 4 - Kontrak Abadi</h3>
+                            <p>Perjalanan Subaru membawanya ke Sanctuary, sebuah desa tersembunyi yang penuh misteri.
+                                Di sini, dia bakal diuji sampai batas kemampuannya. Subaru harus bongkar rahasia-rahasia
+                                Sanctuary sambil cari temen-temen baru yang bisa dipercaya.</p>
+                        </div>
+                        <img src="img_card/arc4.webp" alt="Arc 4">
+                    </div>
+                </a>
+            </div>
+            <div class="arc-item">
+                <a href="arc/arc5.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h3 class="arc-card-title">Arc 5 - Bintang yang Mengukir Sejarah</h3>
+                            <p>Subaru dan gengnya pergi ke Priestella, kota air yang cantik tapi berbahaya. Eh nggak
+                                taunya, mereka malah terlibat perang sama kultus penyihir! Saat kota dalam bahaya besar,
+                                Subaru harus kumpulin semua bantuan yang dia bisa untuk lawan kekuatan jahat yang
+                                mengancam dunia mereka.</p>
+                        </div>
+                        <img src="img_card/arc5.jpeg" alt="Arc 5">
+                    </div>
+                </a>
+            </div>
+            <div class="arc-item">
+                <a href="arc/arc6.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h3 class="arc-card-title">Arc 6 - Aula Kenangan</h3>
+                            <p>Kali ini Subaru nekat manjat Menara Pleiades yang misterius. Dia nyari jawaban dan
+                                ilmu buat cegah bencana di masa depan. Tapi di dalam menara, dia malah harus ngadepin
+                                ujian yang bikin dia harus menggali ingatannya dalam-dalam dan menguji batas
+                                kemampuannya.</p>
+                        </div>
+                        <img src="img_card/arc6.webp" alt="Arc 6">
+                    </div>
+                </a>
+            </div>
+            <div class="arc-item">
+                <a href="arc/arc7.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h3 class="arc-card-title">Arc 7 - Tanah Para Serigala</h3>
+                            <p>Subaru terdampar di Kekaisaran Vollachia yang super berantakan, tempat di mana yang
+                                kuat yang berkuasa. Di tengah kekacauan ini, dia ketemu temen-temen baru sekaligus
+                                musuh-musuh baru, sambil berusaha bikin keadaan jadi lebih baik di negeri yang lagi
+                                dilanda perang ini.</p>
+                        </div>
+                        <img src="img_card/arc7.webp" alt="Arc 7">
+                    </div>
+                </a>
+            </div>
+            <div class="arc-item">
+                <a href="arc/arc8.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h3 class="arc-card-title">Arc 8 - Vincent Vollachia</h3>
+                            <p>Setelah Bencana Besar melanda Vollachia, Subaru memimpin perlawanan melawan pasukan
+                                mayat hidup yang nggak ada habisnya. Gimana caranya pasukan gabungan Vollachia dan
+                                Lugunica bisa menang lawan musuh yang bahkan udah mati aja masih bisa bangkit lagi?</p>
+                        </div>
+                        <img src="img_card/arc8.webp" alt="Arc 8">
+                    </div>
+                </a>
+            </div>
+            <div class="arc-item">
+                <a href="arc/daftar_bab/arc_bab/arc9/bab1.html" class="text-decoration-none">
+                    <div class="arc-card">
+                        <div class="arc-card-body">
+                            <h3 class="arc-card-title">Arc 9 - Cahaya Bintang Tanpa Nama</h3>
+                            <p>Arc terbaru dan paling seru dari Re:Zero! Penasaran? Ikuti terus petualangan Subaru!</p>
+                        </div>
+                        <img src="img_card/arc9.webp" alt="Arc 9">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/logo_darkmode.png" class="center h-14 dark-mode-logo" alt="FlugelArchive">
+                    <img src="img/logo_lightmode.png" class="center h-14 light-mode-logo" alt="FlugelArchive">
+                    <p>FlugelArchive adalah platform terjemahan novel web Re:Zero yang memberikan terjemahan cepat
+                        kepada
+                        pembaca.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#daftar-novel">List Novel</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Ikuti Kami</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/tiveey/"><i class="fab fa-facebook me-2"></i>Facebook</a>
+                        </li>
+                        <li><a href="https://www.instagram.com/kurrkur04/"><i
+                                    class="fab fa-instagram me-2"></i>Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2025 FlugelArchive | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

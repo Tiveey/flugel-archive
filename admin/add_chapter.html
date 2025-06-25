@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Chapter Baru - Admin Re:Zero SPNI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-2xl font-bold mb-6">Tambah Chapter Baru</h1>
+
+        <form id="addChapterForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="arc">
+                    Arc
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="arc" type="number" min="1" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="chapter">
+                    Chapter
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="chapter" type="number" min="1" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+                    Judul
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="title" type="text" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="description">
+                    Deskripsi
+                </label>
+                <textarea
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="description" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="url">
+                    URL Chapter
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="url" type="text" placeholder="Arc/daftar_isi/arc_bab/arc1/bab1.html" required>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Tambah Chapter
+                </button>
+            </div>
+        </form>
+
+        <div id="message" class="hidden p-4 mb-4 rounded"></div>
+    </div>
+
+    <script>
+        document.getElementById('addChapterForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData();
+            formData.append('arc', document.getElementById('arc').value);
+            formData.append('chapter', document.getElementById('chapter').value);
+            formData.append('title', document.getElementById('title').value);
+            formData.append('description', document.getElementById('description').value);
+            formData.append('url', document.getElementById('url').value);
+
+            try {
+                const response = await fetch('../update_chapter.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                const messageDiv = document.getElementById('message');
+
+                if (result.success) {
+                    messageDiv.className = 'block p-4 mb-4 rounded bg-green-100 text-green-700';
+                    messageDiv.textContent = result.message;
+                    this.reset();
+                } else {
+                    messageDiv.className = 'block p-4 mb-4 rounded bg-red-100 text-red-700';
+                    messageDiv.textContent = result.message;
+                }
+
+                messageDiv.classList.remove('hidden');
+
+                setTimeout(() => {
+                    messageDiv.classList.add('hidden');
+                }, 3000);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+
+</html>
